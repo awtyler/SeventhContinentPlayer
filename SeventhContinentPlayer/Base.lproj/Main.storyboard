@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,168 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeventhContinentPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-SM-Ffd" userLabel="area1button">
+                                <rect key="frame" x="16" y="68" width="40" height="30"/>
+                                <state key="normal" title="Area I"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWA-O7-HF2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-9A-Evn">
+                                <rect key="frame" x="144.5" y="318.5" width="86" height="30"/>
+                                <state key="normal" title="Stop Playing"/>
+                                <connections>
+                                    <action selector="StopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeX-2X-TEo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-2j-7gc">
+                                <rect key="frame" x="95" y="68" width="44" height="30"/>
+                                <state key="normal" title="Area II"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffX-H1-zVf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ly-dXA">
+                                <rect key="frame" x="186" y="68" width="47" height="30"/>
+                                <state key="normal" title="Area III"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8x-U6-iWP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFA-pr-plM">
+                                <rect key="frame" x="295" y="68" width="50" height="30"/>
+                                <state key="normal" title="Area IV"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6or-0P-t2k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-cd-NkJ" userLabel="area1button">
+                                <rect key="frame" x="16" y="106" width="46" height="30"/>
+                                <state key="normal" title="Area V"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBa-GN-B3E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-5L-81x">
+                                <rect key="frame" x="95" y="106" width="50" height="30"/>
+                                <state key="normal" title="Area VI"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTh-aW-M1x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYC-7n-dL8">
+                                <rect key="frame" x="186" y="106" width="53" height="30"/>
+                                <state key="normal" title="Area VII"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96n-QT-I9C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-S3-BA6">
+                                <rect key="frame" x="295" y="106" width="57" height="30"/>
+                                <state key="normal" title="Area VIII"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFk-Ga-Xpo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-ZX-qw4" userLabel="area1button">
+                                <rect key="frame" x="16" y="151" width="50" height="30"/>
+                                <state key="normal" title="Area IX"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uv-Jm-jAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-cN-MCt">
+                                <rect key="frame" x="95" y="151" width="46" height="30"/>
+                                <state key="normal" title="Area X"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eF5-KB-9rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-nY-GF9">
+                                <rect key="frame" x="186" y="151" width="50" height="30"/>
+                                <state key="normal" title="Area XI"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24U-s1-mm1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8e-4Wg">
+                                <rect key="frame" x="295" y="151" width="54" height="30"/>
+                                <state key="normal" title="Area XII"/>
+                                <connections>
+                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfE-JG-6pA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currently Playing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-QM-fT3">
+                                <rect key="frame" x="53" y="476" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stopped" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-jC-35k">
+                                <rect key="frame" x="229" y="476" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-4k-sTt">
+                                <rect key="frame" x="98" y="532" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download music"/>
+                                <connections>
+                                    <action selector="downloadMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRU-gy-IkO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lYC-7n-dL8" firstAttribute="baseline" secondItem="0GN-S3-BA6" secondAttribute="baseline" id="1HS-WB-o2p"/>
+                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="baseline" secondItem="FPQ-nY-GF9" secondAttribute="baseline" id="1pK-Tz-cRU"/>
+                            <constraint firstItem="bwd-5L-81x" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="leading" id="7Pv-J0-tid"/>
+                            <constraint firstItem="bwd-5L-81x" firstAttribute="baseline" secondItem="lYC-7n-dL8" secondAttribute="baseline" id="7nO-B4-skq"/>
+                            <constraint firstItem="mka-ly-dXA" firstAttribute="baseline" secondItem="MFA-pr-plM" secondAttribute="baseline" id="BQJ-a5-DkX"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZZ-g2-pLK"/>
+                            <constraint firstItem="FPQ-nY-GF9" firstAttribute="baseline" secondItem="YMk-8e-4Wg" secondAttribute="baseline" id="Czu-bI-UIS"/>
+                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="FPQ-nY-GF9" secondAttribute="leading" id="D4t-yV-CJe"/>
+                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="leading" id="DWt-02-d0O"/>
+                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="YMk-8e-4Wg" secondAttribute="leading" id="K0A-M2-hta"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="KPz-U5-bDL"/>
+                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="top" secondItem="MD4-cd-NkJ" secondAttribute="bottom" constant="15" id="MMC-1d-lP7"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="leading" id="PAx-aj-Iqa"/>
+                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="baseline" secondItem="OlZ-cN-MCt" secondAttribute="baseline" id="QNp-X0-9hX"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="baseline" secondItem="bwd-5L-81x" secondAttribute="baseline" id="RUt-uV-RGK"/>
+                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="leading" id="TlL-kj-T39"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V7z-rv-7sj"/>
+                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="0GN-S3-BA6" secondAttribute="leading" id="VIa-Zg-6Sj"/>
+                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="rNf-2j-7gc" secondAttribute="trailing" constant="47" id="Voj-q8-XPN"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="top" secondItem="wMO-SM-Ffd" secondAttribute="bottom" constant="8" symbolic="YES" id="euA-FO-ac1"/>
+                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="wMO-SM-Ffd" secondAttribute="trailing" constant="39" id="jTR-ah-Fl8"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tAs-Q5-QGE"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="baseline" secondItem="rNf-2j-7gc" secondAttribute="baseline" id="tg8-Wk-q9l"/>
+                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="mka-ly-dXA" secondAttribute="trailing" constant="62" id="yGx-R6-Xb2"/>
+                            <constraint firstItem="rNf-2j-7gc" firstAttribute="baseline" secondItem="mka-ly-dXA" secondAttribute="baseline" id="zMf-xm-WPU"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="leading" id="zYl-8w-qeK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="currentlyPlayingLabel" destination="OU8-jC-35k" id="yNy-U8-TsJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
