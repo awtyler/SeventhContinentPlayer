@@ -20,19 +20,15 @@
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-SM-Ffd" userLabel="area1button">
                                 <rect key="frame" x="16" y="68" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QlS-P4-hPK"/>
+                                </constraints>
                                 <state key="normal" title="Area I"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWA-O7-HF2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-9A-Evn">
-                                <rect key="frame" x="144.5" y="318.5" width="86" height="30"/>
-                                <state key="normal" title="Stop Playing"/>
-                                <connections>
-                                    <action selector="StopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeX-2X-TEo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-2j-7gc">
@@ -58,6 +54,9 @@
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-cd-NkJ" userLabel="area1button">
                                 <rect key="frame" x="16" y="106" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KY4-Ao-JZI"/>
+                                </constraints>
                                 <state key="normal" title="Area V"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
@@ -89,6 +88,9 @@
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-ZX-qw4" userLabel="area1button">
                                 <rect key="frame" x="16" y="151" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2W1-gG-7xb"/>
+                                </constraints>
                                 <state key="normal" title="Area IX"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
@@ -118,66 +120,118 @@
                                     <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfE-JG-6pA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currently Playing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-QM-fT3">
-                                <rect key="frame" x="53" y="476" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Status:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-QM-fT3">
+                                <rect key="frame" x="16" y="257" width="161" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="VgN-3H-uwB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area I: Area II: Area III: Area IV: Area V: Area VI: Area VII: Area VIII: Area IX: Area X: Area XI: Area XII:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG4-Cm-blD">
+                                <rect key="frame" x="16" y="387" width="161" height="244"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stopped" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-jC-35k">
-                                <rect key="frame" x="229" y="476" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xry-hB-iIw">
+                                <rect key="frame" x="185" y="387" width="177" height="244"/>
+                                <string key="text">Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded
+Not Downloaded</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-4k-sTt">
-                                <rect key="frame" x="98" y="532" width="113" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopped" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-jC-35k">
+                                <rect key="frame" x="185" y="257" width="174" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-4k-sTt">
+                                <rect key="frame" x="131" y="305" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ay4-72-1hB"/>
+                                </constraints>
                                 <state key="normal" title="Download music"/>
                                 <connections>
                                     <action selector="downloadMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRU-gy-IkO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-9A-Evn">
+                                <rect key="frame" x="144" y="206" width="86" height="30"/>
+                                <state key="normal" title="Stop Playing"/>
+                                <connections>
+                                    <action selector="StopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeX-2X-TEo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lYC-7n-dL8" firstAttribute="baseline" secondItem="0GN-S3-BA6" secondAttribute="baseline" id="1HS-WB-o2p"/>
-                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="baseline" secondItem="FPQ-nY-GF9" secondAttribute="baseline" id="1pK-Tz-cRU"/>
-                            <constraint firstItem="bwd-5L-81x" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="leading" id="7Pv-J0-tid"/>
-                            <constraint firstItem="bwd-5L-81x" firstAttribute="baseline" secondItem="lYC-7n-dL8" secondAttribute="baseline" id="7nO-B4-skq"/>
-                            <constraint firstItem="mka-ly-dXA" firstAttribute="baseline" secondItem="MFA-pr-plM" secondAttribute="baseline" id="BQJ-a5-DkX"/>
-                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZZ-g2-pLK"/>
-                            <constraint firstItem="FPQ-nY-GF9" firstAttribute="baseline" secondItem="YMk-8e-4Wg" secondAttribute="baseline" id="Czu-bI-UIS"/>
-                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="FPQ-nY-GF9" secondAttribute="leading" id="D4t-yV-CJe"/>
-                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="leading" id="DWt-02-d0O"/>
-                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="YMk-8e-4Wg" secondAttribute="leading" id="K0A-M2-hta"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="KPz-U5-bDL"/>
-                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="top" secondItem="MD4-cd-NkJ" secondAttribute="bottom" constant="15" id="MMC-1d-lP7"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="leading" id="PAx-aj-Iqa"/>
-                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="baseline" secondItem="OlZ-cN-MCt" secondAttribute="baseline" id="QNp-X0-9hX"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="baseline" secondItem="bwd-5L-81x" secondAttribute="baseline" id="RUt-uV-RGK"/>
-                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="leading" id="TlL-kj-T39"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V7z-rv-7sj"/>
-                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="0GN-S3-BA6" secondAttribute="leading" id="VIa-Zg-6Sj"/>
-                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="rNf-2j-7gc" secondAttribute="trailing" constant="47" id="Voj-q8-XPN"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="top" secondItem="wMO-SM-Ffd" secondAttribute="bottom" constant="8" symbolic="YES" id="euA-FO-ac1"/>
-                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="wMO-SM-Ffd" secondAttribute="trailing" constant="39" id="jTR-ah-Fl8"/>
-                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tAs-Q5-QGE"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="baseline" secondItem="rNf-2j-7gc" secondAttribute="baseline" id="tg8-Wk-q9l"/>
-                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="mka-ly-dXA" secondAttribute="trailing" constant="62" id="yGx-R6-Xb2"/>
-                            <constraint firstItem="rNf-2j-7gc" firstAttribute="baseline" secondItem="mka-ly-dXA" secondAttribute="baseline" id="zMf-xm-WPU"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="leading" id="zYl-8w-qeK"/>
+                            <constraint firstItem="mka-ly-dXA" firstAttribute="baseline" secondItem="MFA-pr-plM" secondAttribute="baseline" id="1ot-TG-0W8"/>
+                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="YMk-8e-4Wg" secondAttribute="leading" id="2M4-3e-xpg"/>
+                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="leading" id="3hT-hj-Ufa"/>
+                            <constraint firstItem="bwd-5L-81x" firstAttribute="baseline" secondItem="lYC-7n-dL8" secondAttribute="baseline" id="6FI-yc-rH3"/>
+                            <constraint firstItem="A7B-QM-fT3" firstAttribute="leading" secondItem="vG4-Cm-blD" secondAttribute="leading" id="6no-1p-sJT"/>
+                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="top" secondItem="MD4-cd-NkJ" secondAttribute="bottom" constant="15" id="6tE-bR-dtr"/>
+                            <constraint firstItem="bwd-5L-81x" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="leading" id="7sW-B7-WbD"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="baseline" secondItem="bwd-5L-81x" secondAttribute="baseline" id="85e-Tw-ZVi"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="leading" id="9Ob-Qo-dfP"/>
+                            <constraint firstItem="mfH-4k-sTt" firstAttribute="top" secondItem="OU8-jC-35k" secondAttribute="bottom" constant="19" id="ASh-bz-xhC"/>
+                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="baseline" secondItem="OlZ-cN-MCt" secondAttribute="baseline" id="CNo-Ua-Pww"/>
+                            <constraint firstItem="rNf-2j-7gc" firstAttribute="baseline" secondItem="mka-ly-dXA" secondAttribute="baseline" id="EmO-7b-5w6"/>
+                            <constraint firstItem="vG4-Cm-blD" firstAttribute="baseline" secondItem="Xry-hB-iIw" secondAttribute="baseline" id="F2I-gb-Nbh"/>
+                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="trailing" constant="41" id="Fbt-vx-pSA"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="leading" id="HAO-ug-3s8"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="mfH-4k-sTt" secondAttribute="centerX" id="HQg-jx-PE1"/>
+                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="trailing" constant="56" id="I7Z-5w-gCZ"/>
+                            <constraint firstItem="A7B-QM-fT3" firstAttribute="top" secondItem="rm5-ZX-qw4" secondAttribute="bottom" constant="76" id="KFs-rt-nRc"/>
+                            <constraint firstItem="FPQ-nY-GF9" firstAttribute="baseline" secondItem="YMk-8e-4Wg" secondAttribute="baseline" id="Pht-qO-iNH"/>
+                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="trailing" constant="29" id="QOr-iX-OzF"/>
+                            <constraint firstItem="vG4-Cm-blD" firstAttribute="firstBaseline" secondItem="Xry-hB-iIw" secondAttribute="firstBaseline" id="Qxm-nk-xOb"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="leading" secondItem="Xry-hB-iIw" secondAttribute="leading" id="Ruu-l7-MXs"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMK-Fd-jBe"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VeB-Oa-bfE"/>
+                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="leading" id="VsF-Qy-wFK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xry-hB-iIw" secondAttribute="trailing" constant="13" id="YuK-jt-fMv"/>
+                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="top" secondItem="wMO-SM-Ffd" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4x-dW-KK9"/>
+                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="0GN-S3-BA6" secondAttribute="leading" id="aRR-nD-oee"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="baseline" secondItem="A7B-QM-fT3" secondAttribute="firstBaseline" id="c6K-dl-5iq"/>
+                            <constraint firstItem="Xry-hB-iIw" firstAttribute="leading" secondItem="vG4-Cm-blD" secondAttribute="trailing" constant="8" symbolic="YES" id="f8Y-y2-PwG"/>
+                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="FPQ-nY-GF9" secondAttribute="leading" id="fcQ-s1-rMf"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="g3n-fV-Gp9"/>
+                            <constraint firstItem="lYC-7n-dL8" firstAttribute="baseline" secondItem="0GN-S3-BA6" secondAttribute="baseline" id="gAS-5t-Bgw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vG4-Cm-blD" secondAttribute="bottom" constant="36" id="gYw-nV-Pgt"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="i5u-Oc-bWm"/>
+                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="baseline" secondItem="FPQ-nY-GF9" secondAttribute="baseline" id="l0f-g2-9LT"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="leading" secondItem="A7B-QM-fT3" secondAttribute="trailing" constant="8" symbolic="YES" id="mf0-T9-yZq"/>
+                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="leading" secondItem="A7B-QM-fT3" secondAttribute="leading" id="oiw-er-1sj"/>
+                            <constraint firstItem="A7B-QM-fT3" firstAttribute="top" secondItem="Cmg-9A-Evn" secondAttribute="bottom" constant="21" id="rMn-b8-GVu"/>
+                            <constraint firstItem="vG4-Cm-blD" firstAttribute="top" secondItem="mfH-4k-sTt" secondAttribute="bottom" constant="52" id="u6r-qL-Pei"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="uSu-ym-34n"/>
+                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="baseline" secondItem="rNf-2j-7gc" secondAttribute="baseline" id="zgw-XO-icF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="currentlyPlayingLabel" destination="OU8-jC-35k" id="yNy-U8-TsJ"/>
+                        <outlet property="statusLabel" destination="Xry-hB-iIw" id="FL0-eg-dgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>
