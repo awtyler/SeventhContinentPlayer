@@ -32,9 +32,9 @@ class ViewController: UIViewController {
         
     }
 
-    var player: AVPlayer? = nil;
+    var player: AVAudioPlayer? = nil;
     
-    @IBAction func StopMusic(_ sender: Any) {
+    @IBAction func StopMusic(_ sender: Any?) {
         currentlyPlayingLabel.text = STOPPED_MUSIC_LABEL;
         if(player != nil) {
             player!.pause()
@@ -105,6 +105,8 @@ class ViewController: UIViewController {
         let documentsUrl:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let musicFileUrl = documentsUrl.appendingPathComponent(filenames[areaIndex])
 
+        print("Local Path: \(musicFileUrl)")
+
         return musicFileUrl
     }
     
@@ -119,8 +121,8 @@ class ViewController: UIViewController {
         let musicFileUrl = getFileUrlForArea(areaIndex)
         
         if(!FileManager.default.fileExists(atPath: musicFileUrl.path)) {
+            self.StopMusic(nil)
             downloadFile(areaIndex, successHandler: { areaIndex in
-                print("Download complete AWT...")
                 self.playMusicForArea(areaIndex)
             })
         } else {
@@ -142,9 +144,14 @@ class ViewController: UIViewController {
         //Get local URL for music
         let musicFileUrl = getFileUrlForArea(areaIndex)
 
-        // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-        player = AVPlayer(url: musicFileUrl)
-        player!.play()
+        // Create an AVAudioPlayer, passing it the HTTP Live Streaming URL.
+        do {
+            try player = AVAudioPlayer(contentsOf: musicFileUrl)
+            player!.prepareToPlay()
+            player!.play()
+        } catch {
+            print("Error playing: \(error)")
+        }
     }
     
     @IBAction func downloadMusic(_ sender: Any) {
@@ -198,13 +205,6 @@ class ViewController: UIViewController {
                     if statusCode == 200 {
                         print("Successfully downloaded \(filename). Status code: \(statusCode)")
                         self.statuses[areaIndex] = "Downloaded"
-                        
-                        guard successHandler != nil else {
-                            return
-                        }
-                        
-                        successHandler!(areaIndex)
-                        
                     } else {
                         self.statuses[areaIndex] = "File not found!"
                     }
@@ -212,6 +212,10 @@ class ViewController: UIViewController {
                 
                 do {
                     try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
+                    guard successHandler != nil else {
+                        return
+                    }
+                    successHandler!(areaIndex)
                 } catch (let writeError) {
                     print("Error creating a file \(destinationFileUrl) : \(writeError)")
                     self.statuses[areaIndex] = "Error!"
