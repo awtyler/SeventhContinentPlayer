@@ -13,7 +13,7 @@
 		93260DC621F68DC600705F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93260DC521F68DC600705F41 /* Assets.xcassets */; };
 		93260DC921F68DC600705F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93260DC721F68DC600705F41 /* LaunchScreen.storyboard */; };
 		93260DD421F68F6100705F41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93260DD321F68F6100705F41 /* AVFoundation.framework */; };
-		935D03E6220219A2003FB2E9 /* UICircularProgressRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935D03E5220219A2003FB2E9 /* UICircularProgressRing.framework */; };
+		935D03EA220228E0003FB2E9 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */; };
 		9394124C21FFEE6300DFC961 /* AreaTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9394124B21FFEE6200DFC961 /* AreaTrack.swift */; };
 		93A98F912200A4B100F11FC2 /* AreaTrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A98F902200A4B100F11FC2 /* AreaTrackList.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +29,7 @@
 		93260DD321F68F6100705F41 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9343F17421F8CE2100E70DEF /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileProvider.framework; path = System/Library/Frameworks/FileProvider.framework; sourceTree = SDKROOT; };
 		935D03E5220219A2003FB2E9 /* UICircularProgressRing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UICircularProgressRing.framework; path = Carthage/Build/iOS/UICircularProgressRing.framework; sourceTree = "<group>"; };
+		935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		9394124B21FFEE6200DFC961 /* AreaTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTrack.swift; sourceTree = "<group>"; };
 		93A98F902200A4B100F11FC2 /* AreaTrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTrackList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93260DD421F68F6100705F41 /* AVFoundation.framework in Frameworks */,
-				935D03E6220219A2003FB2E9 /* UICircularProgressRing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +74,7 @@
 				93260DCA21F68DC600705F41 /* Info.plist */,
 				9394124B21FFEE6200DFC961 /* AreaTrack.swift */,
 				93A98F902200A4B100F11FC2 /* AreaTrackList.swift */,
+				935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */,
 			);
 			path = SeventhContinentPlayer;
 			sourceTree = "<group>";
@@ -98,8 +99,6 @@
 				93260DB721F68DC200705F41 /* Sources */,
 				93260DB821F68DC200705F41 /* Frameworks */,
 				93260DB921F68DC200705F41 /* Resources */,
-				935D03E7220219CE003FB2E9 /* ShellScript */,
-				935D03E822021A64003FB2E9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -156,45 +155,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		935D03E7220219CE003FB2E9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/UICircularProgressRing.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/UICircularProgressRing.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-		935D03E822021A64003FB2E9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage outdated --xcode-warnings\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		93260DB721F68DC200705F41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -204,6 +164,7 @@
 				9394124C21FFEE6300DFC961 /* AreaTrack.swift in Sources */,
 				93260DC121F68DC200705F41 /* ViewController.swift in Sources */,
 				93260DBF21F68DC200705F41 /* AppDelegate.swift in Sources */,
+				935D03EA220228E0003FB2E9 /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

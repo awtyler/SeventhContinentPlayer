@@ -11,6 +11,29 @@ import AVKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate {
+    
+    func downloadComplete(_ track: AreaTrack) {
+
+        updateViewAfterDownload(track)
+        
+        if let playTrack = self.trackToPlayAfterDownload {
+            if track.equals(playTrack) {
+                self.trackToPlayAfterDownload = nil
+                playMusic(forTrack: track)
+            }
+        }
+        
+    }
+    
+    func downloadProgressed(_ track: AreaTrack, percentComplete: Double) {
+        if let pb = track.progressBar {
+            pb.setProgress(to: percentComplete, withAnimation: false)
+            if percentComplete >= 1.0 {
+                pb.isHidden = true
+            }
+        }
+        
+    }
 
     func statusUpdated(_ track: AreaTrack) {
         //Update track status on the main thread
@@ -24,8 +47,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
     public let MUSIC_BASE_URL = "https://the7thcontinent.seriouspoulp.com/audio/t7c/music/"
     public let PLAY_BUTTON_IMAGE = "Area_Icons_Play"
     public let STATUS_IMAGES = [
-        DownloadStatus.Downloaded: "Status_Icons_Downloaded",
-        DownloadStatus.Downloading: "Status_Icons_Downloading",
+        DownloadStatus.Downloaded: nil,
+        DownloadStatus.Downloading: nil,
         DownloadStatus.Error: "Status_Icons_Error",
         DownloadStatus.NotDownloaded: "Status_Icons_NotDownloaded",
         DownloadStatus.WaitingForDownload: "Area_Icons_Play"
@@ -36,7 +59,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         for track in AreaTrackList.sharedInstance().all() {
             self.updateStatusImage(forAreaTrack: track)
         }
-        self.updateDownloadAllVisibility()
     }
     
     override func viewDidLoad() {
@@ -75,6 +97,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
             area12statusImage
         ])
         
+        let pbList = [
+            area1progressBar!,
+            area2progressBar!,
+            area3progressBar!,
+            area4progressBar!,
+            area5progressBar!,
+            area6progressBar!,
+            area7progressBar!,
+            area8progressBar!,
+            area9progressBar!,
+            area10progressBar!,
+            area11progressBar!,
+            area12progressBar!
+        ]
+        
+        for bar in pbList {
+            bar.safePercent = 100
+            bar.labelSize = 0
+            bar.lineWidth = 7
+
+        }
+        
+        
+        list.setProgressBars(pbList)
+        
         list.setAllDelegates(self)
         
         updateAllStatuses()
@@ -82,7 +129,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         disableStopButton()
         
 //        testProgress.transform = testProgress.transform.scaledBy(x: 1, y: 20)
-        
         
         //Setup Audio session, output to speaker, and allow airplay & bluetooth
         do {
@@ -93,11 +139,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         } catch {
             print("Error Setting Up Audio Session")
         }
+        
     }
     
 
     var player: AVAudioPlayer? = nil;
     var displayTimer: Timer? = nil;
+    var trackToPlayAfterDownload: AreaTrack? = nil
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
@@ -116,8 +164,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
     @IBOutlet weak var area11button: UIButton!
     @IBOutlet weak var area12button: UIButton!
     
-    @IBOutlet weak var testProgress: UIProgressView!
-    
+    @IBOutlet weak var area1progressBar: CircularProgressBar!
+    @IBOutlet weak var area2progressBar: CircularProgressBar!
+    @IBOutlet weak var area3progressBar: CircularProgressBar!
+    @IBOutlet weak var area4progressBar: CircularProgressBar!
+    @IBOutlet weak var area5progressBar: CircularProgressBar!
+    @IBOutlet weak var area6progressBar: CircularProgressBar!
+    @IBOutlet weak var area7progressBar: CircularProgressBar!
+    @IBOutlet weak var area8progressBar: CircularProgressBar!
+    @IBOutlet weak var area9progressBar: CircularProgressBar!
+    @IBOutlet weak var area10progressBar: CircularProgressBar!
+    @IBOutlet weak var area11progressBar: CircularProgressBar!
+    @IBOutlet weak var area12progressBar: CircularProgressBar!
+
     @IBOutlet weak var downloadAllButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
@@ -160,10 +219,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         
         //If not downloaded, download now
         if track.downloadStatus == .NotDownloaded {
+            //Stop playing the current area
             self.stopMusic(nil)
-            track.download(withProgress: self.testProgress, successHandler: { track in
-                self.playMusic(forTrack: track)
-            })
+            
+            //Keep only the first downloaded item to play, if multiple items are clicked before the first download completes.
+            if self.trackToPlayAfterDownload == nil {
+                self.trackToPlayAfterDownload = track
+            }
+            self.downloadTrack(track)
         } else {
             playMusic(forTrack: track)
         }
@@ -171,14 +234,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
     }
     
     @IBAction func downloadMusic(_ sender: Any) {
-        
-        print("Attempting download...")
-        
-        //TODO: Only allow x downloads at a time
-        for track in AreaTrackList.sharedInstance().all() {
-            track.download()
+
+        let refreshAlert = UIAlertController(title: "Download Tracks", message: "What do you want to download?", preferredStyle: UIAlertController.Style.alert)
+
+        if !AreaTrackList.sharedInstance().areAllDownloaded() {
+            refreshAlert.addAction(UIAlertAction(title: "Download Missing Tracks", style: .default, handler: { (action: UIAlertAction!) in
+                for track in AreaTrackList.sharedInstance().all() {
+                    track.updateStatus()
+                    if track.downloadStatus != .Downloaded {
+                        self.downloadTrack(track)
+                    }
+                }
+            }))
         }
+
+        refreshAlert.addAction(UIAlertAction(title: "Delete Tracks and Download Again", style: .destructive, handler: { (action: UIAlertAction!) in
+            for track in AreaTrackList.sharedInstance().all() {
+                self.downloadTrack(track)
+            }
+        }))
         
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
         
     }
     
@@ -258,15 +337,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         }
         
         if track.imageView != nil {
-            track.imageView!.image = UIImage(named: imageName)
-        }
-    }
-    
-    func updateDownloadAllVisibility() {
-        if AreaTrackList.sharedInstance().areAllDownloaded() {
-            //Disable button
-            self.downloadAllButton.isEnabled = false
-            self.downloadAllButton.alpha = 0.5
+            if let iname = imageName {
+                track.imageView!.image = UIImage(named: iname)
+            } else {
+                track.imageView!.image = nil
+            }
         }
     }
     
@@ -280,5 +355,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         self.stopButton.alpha = 1.0
     }
 
-}
+    func downloadTrack(_ track: AreaTrack) {
+        self.updateViewForDownload(track)
+        track.download()
+    }
+    
+    func updateViewForDownload(_ track: AreaTrack) {
+        if let pb = track.progressBar {
+            pb.setProgress(to: 0.0, withAnimation: false)
+            pb.isHidden = false
+        }
+        
+        if let btn = track.button {
+            btn.alpha = CGFloat(0.5)
+        }
+    }
+    
+    func updateViewAfterDownload(_ track: AreaTrack) {
+        if let pb = track.progressBar {
+            pb.isHidden = true
+        }
+        if let btn = track.button {
+            btn.alpha = CGFloat(1.0)
+        }
 
+    }
+    
+}
