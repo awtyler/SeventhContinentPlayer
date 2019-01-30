@@ -10,231 +10,270 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate {
+
+    func statusUpdated(_ track: AreaTrack) {
+        //Update track status on the main thread
+        DispatchQueue.main.async {
+            self.updateStatusImage(forAreaTrack: track)
+        }
+    }
 
     public let AREA_COUNT = 12
     public let STOPPED_MUSIC_LABEL = "Stopped"
     public let MUSIC_BASE_URL = "https://the7thcontinent.seriouspoulp.com/audio/t7c/music/"
+    public let PLAY_BUTTON_IMAGE = "Area_Icons_Play"
+    public let STATUS_IMAGES = [
+        DownloadStatus.Downloaded: "Status_Icons_Downloaded",
+        DownloadStatus.Downloading: "Status_Icons_Downloading",
+        DownloadStatus.Error: "Status_Icons_Error",
+        DownloadStatus.NotDownloaded: "Status_Icons_NotDownloaded",
+        DownloadStatus.WaitingForDownload: "Area_Icons_Play"
+    ]
+    
+    private func updateAllStatuses() {
+        //Update status for all tracks
+        for track in AreaTrackList.sharedInstance().all() {
+            self.updateStatusImage(forAreaTrack: track)
+        }
+        self.updateDownloadAllVisibility()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let list = AreaTrackList.sharedInstance()
         
-        for i in 0..<AREA_COUNT {
-            if FileManager.default.fileExists(atPath: getFileUrlForArea(i).path) {
-                statuses[i] = "Downloaded"
-            } else {
-                statuses[i] = "Not Downloaded"
-            }
+        //Assign buttons to AreaTracks
+        list.setButtons([
+            area1button,
+            area2button,
+            area3button,
+            area4button,
+            area5button,
+            area6button,
+            area7button,
+            area8button,
+            area9button,
+            area10button,
+            area11button,
+            area12button
+        ])
+        
+        list.setStatusImages([
+            area1statusImage,
+            area2statusImage,
+            area3statusImage,
+            area4statusImage,
+            area5statusImage,
+            area6statusImage,
+            area7statusImage,
+            area8statusImage,
+            area9statusImage,
+            area10statusImage,
+            area11statusImage,
+            area12statusImage
+        ])
+        
+        list.setAllDelegates(self)
+        
+        updateAllStatuses()
+        
+        disableStopButton()
+        
+        //Setup Audio session, output to speaker, and allow airplay & bluetooth
+        do {
+            let instance = AVAudioSession.sharedInstance()
+            try instance.setActive(true)
+            try instance.setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: [AVAudioSession.CategoryOptions.allowAirPlay, AVAudioSession.CategoryOptions.allowBluetooth, AVAudioSession.CategoryOptions.allowBluetoothA2DP])
+            try instance.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+        } catch {
+            print("Error Setting Up Audio Session")
         }
-        
-        updateStatusLabel()
-        
     }
+    
 
     var player: AVAudioPlayer? = nil;
-    
-    @IBAction func StopMusic(_ sender: Any?) {
-        currentlyPlayingLabel.text = STOPPED_MUSIC_LABEL;
-        if(player != nil) {
-            player!.pause()
-        }
-    }
-
-    let filenames: [String] = [
-        "01_The7thContinent_AREA_I.mp3",
-        "02_The7thContinent_AREA_II.mp3",
-        "03_The7thContinent_AREA_III.mp3",
-        "04_The7thContinent_AREA_IV.mp3",
-        "05_The7thContinent_AREA_V.mp3",
-        "06_The7thContinent_AREA_VI.mp3",
-        "07_The7thContinent_AREA_VII.mp3",
-        "08_The7thContinent_AREA_VIII.mp3",
-        "09_The7thContinent_AREA_IX.mp3",
-        "10_The7thContinent_AREA_X.mp3",
-        "11_The7thContinent_AREA_XI.mp3",
-        "12_The7thContinent_AREA_XII.mp3"
-    ]
-    
-    let labels: [String] = [
-        "Area I",
-        "Area II",
-        "Area III",
-        "Area IV",
-        "Area V",
-        "Area VI",
-        "Area VII",
-        "Area VIII",
-        "Area IX",
-        "Area X",
-        "Area XI",
-        "Area XII"
-    ]
-    
-    var statuses: [String] = [
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded",
-        "Not Downloaded"
-    ];
+    var displayTimer: Timer? = nil;
     
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var currentlyPlayingLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var currentTimeLabel: UILabel!
     
-    private func updateStatusLabel() {
-        var text = "";
-        for stat: String in statuses {
-            if text != "" {
-                text += "\n"
-            }
-            text += stat
+    @IBOutlet weak var area1button: UIButton!
+    @IBOutlet weak var area2button: UIButton!
+    @IBOutlet weak var area3button: UIButton!
+    @IBOutlet weak var area4button: UIButton!
+    @IBOutlet weak var area5button: UIButton!
+    @IBOutlet weak var area6button: UIButton!
+    @IBOutlet weak var area7button: UIButton!
+    @IBOutlet weak var area8button: UIButton!
+    @IBOutlet weak var area9button: UIButton!
+    @IBOutlet weak var area10button: UIButton!
+    @IBOutlet weak var area11button: UIButton!
+    @IBOutlet weak var area12button: UIButton!
+    
+    @IBOutlet weak var downloadAllButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var area1statusImage: UIImageView!
+    @IBOutlet weak var area2statusImage: UIImageView!
+    @IBOutlet weak var area3statusImage: UIImageView!
+    @IBOutlet weak var area4statusImage: UIImageView!
+    @IBOutlet weak var area5statusImage: UIImageView!
+    @IBOutlet weak var area6statusImage: UIImageView!
+    @IBOutlet weak var area7statusImage: UIImageView!
+    @IBOutlet weak var area8statusImage: UIImageView!
+    @IBOutlet weak var area9statusImage: UIImageView!
+    @IBOutlet weak var area10statusImage: UIImageView!
+    @IBOutlet weak var area11statusImage: UIImageView!
+    @IBOutlet weak var area12statusImage: UIImageView!
+
+    @IBAction func stopMusic(_ sender: Any?) {
+        if(player != nil) {
+            player!.stop()
+            player = nil;
         }
-        statusLabel.text = text;
-    }
-    
-    private func getFileUrlForArea(_ areaIndex: Int) -> URL {
-        //Load music locally if downloaded
-        let documentsUrl:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let musicFileUrl = documentsUrl.appendingPathComponent(filenames[areaIndex])
-
-        print("Local Path: \(musicFileUrl)")
-
-        return musicFileUrl
+        if(displayTimer != nil) {
+            displayTimer?.invalidate()
+            totalTimeLabel.text = "00:00"
+            currentTimeLabel.text = "00:00"
+            setPlayButton(nil)
+        }
+        disableStopButton()
     }
     
     @IBAction func playArea(_ sender: UIButton) {
 
-        let areaIndex = sender.tag - 1;
-        if areaIndex < 0 {
+        guard let track: AreaTrack = AreaTrackList.sharedInstance().find(byButton: sender) else {
+            print("No track for button")
             return
         }
         
-        //Load music locally if downloaded
-        let musicFileUrl = getFileUrlForArea(areaIndex)
+        //Update download status
+        track.updateStatus()
         
-        if(!FileManager.default.fileExists(atPath: musicFileUrl.path)) {
-            self.StopMusic(nil)
-            downloadFile(areaIndex, successHandler: { areaIndex in
-                self.playMusicForArea(areaIndex)
+        //If not downloaded, download now
+        if track.downloadStatus == .NotDownloaded {
+            self.stopMusic(nil)
+            track.download(withSuccessHandler: { track in
+                self.playMusic(forTrack: track)
             })
         } else {
-            playMusicForArea(areaIndex)
+            playMusic(forTrack: track)
         }
 
-    }
-    
-    func playMusicForArea(_ areaIndex: Int) {
-        
-        guard let labelText = labels[areaIndex] as String? else {
-            return
-        }
-        
-        DispatchQueue.main.async {
-            self.currentlyPlayingLabel.text = labelText;
-        }
-        
-        //Get local URL for music
-        let musicFileUrl = getFileUrlForArea(areaIndex)
-
-        // Create an AVAudioPlayer, passing it the HTTP Live Streaming URL.
-        do {
-            try player = AVAudioPlayer(contentsOf: musicFileUrl)
-            player!.prepareToPlay()
-            player!.play()
-        } catch {
-            print("Error playing: \(error)")
-        }
     }
     
     @IBAction func downloadMusic(_ sender: Any) {
         
-        //TODO: Download music
-        for i in 0..<AREA_COUNT {
-            downloadFile(i, successHandler: nil)
+        print("Attempting download...")
+        
+        //TODO: Only allow x downloads at a time
+        for track in AreaTrackList.sharedInstance().all() {
+            track.download()
         }
         
         
     }
     
-    private func downloadFile(_ areaIndex: Int, successHandler: ((_ result: Int) -> Void)?) -> Void {
+    func setPlayButton() {
+        setPlayButton(nil)
+    }
+    
+    func setPlayButton(_ playingTrack: AreaTrack?) {
+        
+        for track in AreaTrackList.sharedInstance().all() {
+            let areaButton = track.button
+            var imageName = track.buttonImage
+            if playingTrack != nil && track.equals(playingTrack!) {
+                imageName = PLAY_BUTTON_IMAGE
+            }
+            if areaButton != nil {
+                areaButton!.setImage(UIImage(named: imageName), for: UIControl.State.normal)
+            }
+        }
+    }
+    
+    func playMusic(forTrack track: AreaTrack) {
+        
+        DispatchQueue.main.async {
+            //Update the view with play time for the tracks
+            self.displayTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {(Timer) in
+                self.updateTimeLeft()
+            })
 
-        guard let filename = filenames[areaIndex] as String? else {
+            //Set the button image to the "Play" image
+            self.setPlayButton(track)
+            
+            //Enable the Stop button
+            self.enableStopButton()
+        }
+        
+        //Get local URL for music
+        let musicFileUrl = track.getLocalUrl()
+
+        // Create an AVAudioPlayer, passing it the local URL
+        do {
+            try player = AVAudioPlayer(contentsOf: musicFileUrl)
+            player!.prepareToPlay()
+            player!.numberOfLoops = -1      //Repeat indefinitely
+            player!.play()
+        } catch {
+            print("Error playing: \(error)")
+            setPlayButton()
+        }
+    }
+    
+    
+    private func timecodeString(_ seconds: Double) -> String {
+        let minutes: Int = Int(seconds) / 60
+        let seconds: Int = Int(seconds) % 60
+        
+        var mStr: String = "00\(minutes)"
+        mStr = String(mStr[mStr.index(mStr.endIndex, offsetBy: -2)...])
+        
+        var sStr: String = "00\(seconds)"
+        sStr = String(sStr[sStr.index(sStr.endIndex, offsetBy: -2)...])
+        
+        return "\(mStr):\(sStr)"
+    }
+    
+    private func updateTimeLeft() {
+        if(self.player != nil) {
+            self.currentTimeLabel.text = "\(self.timecodeString(self.player!.currentTime.rounded()))"
+            self.totalTimeLabel.text = "\(self.timecodeString(self.player!.duration.rounded()))"
+        }
+    }
+
+    private func updateStatusImage(forAreaTrack track: AreaTrack) {
+        guard let imageName = STATUS_IMAGES[track.downloadStatus] else {
+            print("Invalid status")
             return
         }
         
-        // Create destination URL
-        let documentsUrl:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let destinationFileUrl = documentsUrl.appendingPathComponent(filename)
-        
-        //The URL to Save
-        let musicUrl = URL(string: self.MUSIC_BASE_URL + filename)
-
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        
-        let request = URLRequest(url:musicUrl!)
-        
-        
-        self.statuses[areaIndex] = "Downloading..."
-        self.updateStatusLabel()
-
-        let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
-            
-            if FileManager.default.fileExists(atPath: destinationFileUrl.path) {
-                print("Removing existing file...")
-                do {
-                    try FileManager.default.removeItem(at: destinationFileUrl)
-                } catch(let error) {
-                    print("Error removing file: \(error)")
-                }
-            }
-            
-            print("Starting download...")
-            
-            if let tempLocalUrl = tempLocalUrl, error == nil {
-                // Success
-                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-                    if statusCode == 200 {
-                        print("Successfully downloaded \(filename). Status code: \(statusCode)")
-                        self.statuses[areaIndex] = "Downloaded"
-                    } else {
-                        self.statuses[areaIndex] = "File not found!"
-                    }
-                }
-                
-                do {
-                    try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
-                    guard successHandler != nil else {
-                        return
-                    }
-                    successHandler!(areaIndex)
-                } catch (let writeError) {
-                    print("Error creating a file \(destinationFileUrl) : \(writeError)")
-                    self.statuses[areaIndex] = "Error!"
-                }
-                
-            } else {
-                print("Error took place while downloading a file. Error description: \(error?.localizedDescription ?? "???")");
-                self.statuses[areaIndex] = "Error!"
-            }
-            
-            DispatchQueue.main.async{
-                self.updateStatusLabel()
-            }
-            
+        if track.imageView != nil {
+            track.imageView!.image = UIImage(named: imageName)
         }
-        task.resume();
-
-        return
-        
     }
+    
+    func updateDownloadAllVisibility() {
+        if AreaTrackList.sharedInstance().areAllDownloaded() {
+            //Disable button
+            self.downloadAllButton.isEnabled = false
+            self.downloadAllButton.alpha = 0.5
+        }
+    }
+    
+    func disableStopButton() {
+        self.stopButton.isEnabled = false
+        self.stopButton.alpha = 0.5
+    }
+
+    func enableStopButton() {
+        self.stopButton.isEnabled = true
+        self.stopButton.alpha = 1.0
+    }
+
 }
 

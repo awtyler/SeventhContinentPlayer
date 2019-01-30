@@ -18,215 +18,335 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-SM-Ffd" userLabel="area1button">
-                                <rect key="frame" x="16" y="68" width="40" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="QlS-P4-hPK"/>
-                                </constraints>
-                                <state key="normal" title="Area I"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWA-O7-HF2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-2j-7gc">
-                                <rect key="frame" x="95" y="68" width="44" height="30"/>
-                                <state key="normal" title="Area II"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffX-H1-zVf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ly-dXA">
-                                <rect key="frame" x="186" y="68" width="47" height="30"/>
-                                <state key="normal" title="Area III"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8x-U6-iWP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFA-pr-plM">
-                                <rect key="frame" x="295" y="68" width="50" height="30"/>
-                                <state key="normal" title="Area IV"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6or-0P-t2k"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-cd-NkJ" userLabel="area1button">
-                                <rect key="frame" x="16" y="106" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KY4-Ao-JZI"/>
-                                </constraints>
-                                <state key="normal" title="Area V"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBa-GN-B3E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-5L-81x">
-                                <rect key="frame" x="95" y="106" width="50" height="30"/>
-                                <state key="normal" title="Area VI"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTh-aW-M1x"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYC-7n-dL8">
-                                <rect key="frame" x="186" y="106" width="53" height="30"/>
-                                <state key="normal" title="Area VII"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96n-QT-I9C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-S3-BA6">
-                                <rect key="frame" x="295" y="106" width="57" height="30"/>
-                                <state key="normal" title="Area VIII"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFk-Ga-Xpo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-ZX-qw4" userLabel="area1button">
-                                <rect key="frame" x="16" y="151" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2W1-gG-7xb"/>
-                                </constraints>
-                                <state key="normal" title="Area IX"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="filename" value="02_The7thContinent_AREA_II.mp3"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uv-Jm-jAE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-cN-MCt">
-                                <rect key="frame" x="95" y="151" width="46" height="30"/>
-                                <state key="normal" title="Area X"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eF5-KB-9rp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-nY-GF9">
-                                <rect key="frame" x="186" y="151" width="50" height="30"/>
-                                <state key="normal" title="Area XI"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24U-s1-mm1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8e-4Wg">
-                                <rect key="frame" x="295" y="151" width="54" height="30"/>
-                                <state key="normal" title="Area XII"/>
-                                <connections>
-                                    <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfE-JG-6pA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Status:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-QM-fT3">
-                                <rect key="frame" x="16" y="257" width="161" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="VgN-3H-uwB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-QM-fT3">
+                                <rect key="frame" x="20" y="593.5" width="76.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area I: Area II: Area III: Area IV: Area V: Area VI: Area VII: Area VIII: Area IX: Area X: Area XI: Area XII:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG4-Cm-blD">
-                                <rect key="frame" x="16" y="387" width="161" height="244"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-jC-35k">
+                                <rect key="frame" x="122.5" y="593.5" width="76.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xry-hB-iIw">
-                                <rect key="frame" x="185" y="387" width="177" height="244"/>
-                                <string key="text">Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded
-Not Downloaded</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopped" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-jC-35k">
-                                <rect key="frame" x="185" y="257" width="174" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-4k-sTt">
-                                <rect key="frame" x="131" y="305" width="113" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-9A-Evn">
+                                <rect key="frame" x="292" y="572" width="75" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ay4-72-1hB"/>
+                                    <constraint firstAttribute="width" secondItem="Cmg-9A-Evn" secondAttribute="height" multiplier="1:1" id="6CT-db-OPI"/>
                                 </constraints>
-                                <state key="normal" title="Download music"/>
+                                <state key="normal" title="Stop Playing" image="Area_Icons_Stop"/>
+                                <connections>
+                                    <action selector="stopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhO-gq-u7V"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-Rb-JsO">
+                                <rect key="frame" x="8" y="290" width="359" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-SM-Ffd" userLabel="Area I">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="height" multiplier="1:1" id="Ndb-6e-o51"/>
+                                        </constraints>
+                                        <state key="normal" title="Area I" image="Area_Icons_I"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWA-O7-HF2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-2j-7gc">
+                                        <rect key="frame" x="90" y="0.0" width="89.5" height="90"/>
+                                        <state key="normal" title="Area II" image="Area_Icons_II"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffX-H1-zVf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ly-dXA">
+                                        <rect key="frame" x="179.5" y="0.0" width="90" height="90"/>
+                                        <state key="normal" title="Area III" image="Area_Icons_III"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8x-U6-iWP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFA-pr-plM">
+                                        <rect key="frame" x="269.5" y="0.0" width="89.5" height="90"/>
+                                        <state key="normal" title="Area IV" image="Area_Icons_IV"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6or-0P-t2k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-cd-NkJ" userLabel="Area V">
+                                        <rect key="frame" x="0.0" y="90" width="90" height="89.5"/>
+                                        <state key="normal" title="Area V" image="Area_Icons_V"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBa-GN-B3E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-5L-81x">
+                                        <rect key="frame" x="90" y="90" width="89.5" height="89.5"/>
+                                        <state key="normal" title="Area VI" image="Area_Icons_VI"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTh-aW-M1x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYC-7n-dL8">
+                                        <rect key="frame" x="179.5" y="90" width="90" height="89.5"/>
+                                        <state key="normal" title="Area VII" image="Area_Icons_VII"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96n-QT-I9C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-S3-BA6">
+                                        <rect key="frame" x="269.5" y="90" width="89.5" height="89.5"/>
+                                        <state key="normal" title="Area VIII" image="Area_Icons_VIII"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFk-Ga-Xpo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-ZX-qw4" userLabel="Area IX">
+                                        <rect key="frame" x="0.0" y="179.5" width="90" height="90"/>
+                                        <state key="normal" title="Area IX" image="Area_Icons_IX"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uv-Jm-jAE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-cN-MCt">
+                                        <rect key="frame" x="90" y="179.5" width="89.5" height="90"/>
+                                        <state key="normal" title="Area X" image="Area_Icons_X"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eF5-KB-9rp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPQ-nY-GF9">
+                                        <rect key="frame" x="179.5" y="179.5" width="90" height="90"/>
+                                        <state key="normal" title="Area XI" image="Area_Icons_XI"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24U-s1-mm1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8e-4Wg">
+                                        <rect key="frame" x="269.5" y="179.5" width="89.5" height="90"/>
+                                        <state key="normal" title="Area XII" image="Area_Icons_XII"/>
+                                        <connections>
+                                            <action selector="playArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfE-JG-6pA"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="oq4-tU-gzF">
+                                        <rect key="frame" x="45" y="45" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="Eei-dt-kOz">
+                                        <rect key="frame" x="134.5" y="45" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="T59-4y-evW">
+                                        <rect key="frame" x="224.5" y="45" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-tC-UkY">
+                                        <rect key="frame" x="314" y="45" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="lfB-xj-VXf">
+                                        <rect key="frame" x="45" y="134.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="26" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="4PS-Xn-RUK">
+                                        <rect key="frame" x="134.5" y="134.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="27" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="tue-Qh-Fty">
+                                        <rect key="frame" x="224.5" y="134.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="28" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="JLG-fC-W4p">
+                                        <rect key="frame" x="314" y="134.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="29" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="VSR-26-aMz">
+                                        <rect key="frame" x="45" y="224.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-V7-f4x">
+                                        <rect key="frame" x="134.5" y="224.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-nT-K1P">
+                                        <rect key="frame" x="224.5" y="224.5" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="32" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-BB-g1M">
+                                        <rect key="frame" x="314" y="224.5" width="45" height="45"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FPQ-nY-GF9" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="1mS-ZW-9QW"/>
+                                    <constraint firstItem="lYC-7n-dL8" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="1r7-Tr-GWc"/>
+                                    <constraint firstItem="JLG-fC-W4p" firstAttribute="height" secondItem="0GN-S3-BA6" secondAttribute="height" multiplier="0.5" id="43A-6d-7nB"/>
+                                    <constraint firstItem="XNx-nT-K1P" firstAttribute="trailing" secondItem="FPQ-nY-GF9" secondAttribute="trailing" id="4fj-Gd-PiK"/>
+                                    <constraint firstItem="tue-Qh-Fty" firstAttribute="height" secondItem="lYC-7n-dL8" secondAttribute="height" multiplier="0.5" id="8J6-rw-nyM"/>
+                                    <constraint firstItem="rm5-ZX-qw4" firstAttribute="top" secondItem="MD4-cd-NkJ" secondAttribute="bottom" id="9hw-TJ-1aN"/>
+                                    <constraint firstItem="VSR-26-aMz" firstAttribute="height" secondItem="rm5-ZX-qw4" secondAttribute="height" multiplier="0.5" id="ATh-eq-Pu1"/>
+                                    <constraint firstItem="lfB-xj-VXf" firstAttribute="width" secondItem="MD4-cd-NkJ" secondAttribute="width" multiplier="0.5" id="AgO-5E-rw9"/>
+                                    <constraint firstItem="rNf-2j-7gc" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="BbW-7X-0Dp"/>
+                                    <constraint firstItem="wMO-SM-Ffd" firstAttribute="top" secondItem="rNf-2j-7gc" secondAttribute="top" id="CMh-Py-GIk"/>
+                                    <constraint firstItem="OlZ-cN-MCt" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="Dgk-nP-ccE"/>
+                                    <constraint firstItem="rNf-2j-7gc" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="EOX-gF-Eed"/>
+                                    <constraint firstItem="3H4-tC-UkY" firstAttribute="width" secondItem="MFA-pr-plM" secondAttribute="width" multiplier="0.5" id="F1X-iu-DN3"/>
+                                    <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="cKh-Rb-JsO" secondAttribute="leading" id="FLD-34-L6c"/>
+                                    <constraint firstItem="XNx-nT-K1P" firstAttribute="height" secondItem="FPQ-nY-GF9" secondAttribute="height" multiplier="0.5" id="Fae-rn-3dA"/>
+                                    <constraint firstItem="lYC-7n-dL8" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="Gh1-1o-Uxl"/>
+                                    <constraint firstItem="MD4-cd-NkJ" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="J89-Bh-ZKw"/>
+                                    <constraint firstItem="VSR-26-aMz" firstAttribute="trailing" secondItem="rm5-ZX-qw4" secondAttribute="trailing" id="JGf-2V-a9D"/>
+                                    <constraint firstItem="YMk-8e-4Wg" firstAttribute="top" secondItem="0GN-S3-BA6" secondAttribute="bottom" id="JIJ-MK-9I4"/>
+                                    <constraint firstItem="3H4-tC-UkY" firstAttribute="trailing" secondItem="MFA-pr-plM" secondAttribute="trailing" id="JL5-uP-vZE"/>
+                                    <constraint firstItem="tue-Qh-Fty" firstAttribute="width" secondItem="lYC-7n-dL8" secondAttribute="width" multiplier="0.5" id="JPU-pO-PbQ"/>
+                                    <constraint firstItem="T59-4y-evW" firstAttribute="trailing" secondItem="mka-ly-dXA" secondAttribute="trailing" id="Jx3-zM-tfg"/>
+                                    <constraint firstItem="JLG-fC-W4p" firstAttribute="width" secondItem="0GN-S3-BA6" secondAttribute="width" multiplier="0.5" id="KvG-0c-LSp"/>
+                                    <constraint firstItem="Eei-dt-kOz" firstAttribute="width" secondItem="rNf-2j-7gc" secondAttribute="width" multiplier="0.5" id="L8X-Ef-9Oy"/>
+                                    <constraint firstItem="lfB-xj-VXf" firstAttribute="trailing" secondItem="MD4-cd-NkJ" secondAttribute="trailing" id="L90-oB-jLE"/>
+                                    <constraint firstItem="3H4-tC-UkY" firstAttribute="height" secondItem="MFA-pr-plM" secondAttribute="height" multiplier="0.5" id="MWU-Px-Iex"/>
+                                    <constraint firstItem="JLG-fC-W4p" firstAttribute="bottom" secondItem="0GN-S3-BA6" secondAttribute="bottom" id="Maa-gP-MgQ"/>
+                                    <constraint firstItem="lYC-7n-dL8" firstAttribute="top" secondItem="mka-ly-dXA" secondAttribute="bottom" id="MoA-Wf-Hrb"/>
+                                    <constraint firstItem="Tbo-V7-f4x" firstAttribute="bottom" secondItem="OlZ-cN-MCt" secondAttribute="bottom" id="Mv2-RN-QnX"/>
+                                    <constraint firstItem="tue-Qh-Fty" firstAttribute="trailing" secondItem="lYC-7n-dL8" secondAttribute="trailing" id="Nqw-85-kfD"/>
+                                    <constraint firstItem="T59-4y-evW" firstAttribute="height" secondItem="mka-ly-dXA" secondAttribute="height" multiplier="0.5" id="PMJ-YY-m2G"/>
+                                    <constraint firstItem="0GN-S3-BA6" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="Pun-RS-MDh"/>
+                                    <constraint firstItem="rm5-ZX-qw4" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="R1F-J6-orC"/>
+                                    <constraint firstItem="FPQ-nY-GF9" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="trailing" id="RPK-Hj-oAG"/>
+                                    <constraint firstItem="3H4-tC-UkY" firstAttribute="bottom" secondItem="MFA-pr-plM" secondAttribute="bottom" id="T1H-gS-U5k"/>
+                                    <constraint firstItem="Tbo-V7-f4x" firstAttribute="width" secondItem="OlZ-cN-MCt" secondAttribute="width" multiplier="0.5" id="TLa-Gr-ad1"/>
+                                    <constraint firstItem="rm5-ZX-qw4" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="TOZ-3H-Ni9"/>
+                                    <constraint firstItem="XNx-nT-K1P" firstAttribute="width" secondItem="FPQ-nY-GF9" secondAttribute="width" multiplier="0.5" id="U1C-9n-2ZN"/>
+                                    <constraint firstItem="oq4-tU-gzF" firstAttribute="bottom" secondItem="wMO-SM-Ffd" secondAttribute="bottom" id="U3D-wA-PJV"/>
+                                    <constraint firstItem="FPQ-nY-GF9" firstAttribute="top" secondItem="lYC-7n-dL8" secondAttribute="bottom" id="VgA-Jm-eeu"/>
+                                    <constraint firstItem="FPQ-nY-GF9" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="XOq-b8-9q4"/>
+                                    <constraint firstItem="4PS-Xn-RUK" firstAttribute="width" secondItem="bwd-5L-81x" secondAttribute="width" multiplier="0.5" id="Yef-wQ-gFt"/>
+                                    <constraint firstItem="VSR-26-aMz" firstAttribute="width" secondItem="rm5-ZX-qw4" secondAttribute="width" multiplier="0.5" id="ZtZ-0w-q5t"/>
+                                    <constraint firstItem="bwd-5L-81x" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="a1d-jH-Std"/>
+                                    <constraint firstItem="OlZ-cN-MCt" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="adD-iO-TO6"/>
+                                    <constraint firstItem="Eei-dt-kOz" firstAttribute="bottom" secondItem="rNf-2j-7gc" secondAttribute="bottom" id="afr-I1-pXw"/>
+                                    <constraint firstItem="Tbo-V7-f4x" firstAttribute="trailing" secondItem="OlZ-cN-MCt" secondAttribute="trailing" id="ayC-Rl-mYj"/>
+                                    <constraint firstItem="lfB-xj-VXf" firstAttribute="bottom" secondItem="MD4-cd-NkJ" secondAttribute="bottom" id="bIW-d0-ylh"/>
+                                    <constraint firstItem="oq4-tU-gzF" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" multiplier="0.5" id="bKG-9M-Dan"/>
+                                    <constraint firstItem="tue-Qh-Fty" firstAttribute="bottom" secondItem="lYC-7n-dL8" secondAttribute="bottom" id="cqU-17-266"/>
+                                    <constraint firstItem="MD4-cd-NkJ" firstAttribute="top" secondItem="wMO-SM-Ffd" secondAttribute="bottom" id="d1p-xg-HNM"/>
+                                    <constraint firstItem="bwd-5L-81x" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="drD-Ld-xbr"/>
+                                    <constraint firstItem="0GN-S3-BA6" firstAttribute="top" secondItem="MFA-pr-plM" secondAttribute="bottom" id="eTR-Pv-bWe"/>
+                                    <constraint firstItem="4PS-Xn-RUK" firstAttribute="height" secondItem="bwd-5L-81x" secondAttribute="height" multiplier="0.5" id="ea2-im-ELY"/>
+                                    <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="trailing" id="eqv-98-Tye"/>
+                                    <constraint firstItem="mka-ly-dXA" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="eyL-sf-b2j"/>
+                                    <constraint firstItem="rNf-2j-7gc" firstAttribute="top" secondItem="cKh-Rb-JsO" secondAttribute="top" id="fE6-dW-O4b"/>
+                                    <constraint firstItem="YMk-8e-4Wg" firstAttribute="leading" secondItem="FPQ-nY-GF9" secondAttribute="trailing" id="fOV-oh-N1u"/>
+                                    <constraint firstItem="JLG-fC-W4p" firstAttribute="trailing" secondItem="0GN-S3-BA6" secondAttribute="trailing" id="g0n-un-qT3"/>
+                                    <constraint firstItem="Tbo-V7-f4x" firstAttribute="height" secondItem="OlZ-cN-MCt" secondAttribute="height" multiplier="0.5" id="gQw-Z4-NTn"/>
+                                    <constraint firstAttribute="bottom" secondItem="rm5-ZX-qw4" secondAttribute="bottom" constant="0.5" id="gkj-Pj-Zhf"/>
+                                    <constraint firstItem="T59-4y-evW" firstAttribute="bottom" secondItem="mka-ly-dXA" secondAttribute="bottom" id="gzm-4z-4xv"/>
+                                    <constraint firstItem="MFA-pr-plM" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="hUe-4I-9T4"/>
+                                    <constraint firstItem="OlZ-cN-MCt" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="trailing" id="iX1-9l-g5D"/>
+                                    <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="mka-ly-dXA" secondAttribute="trailing" id="ioE-NS-RDL"/>
+                                    <constraint firstItem="Eei-dt-kOz" firstAttribute="height" secondItem="rNf-2j-7gc" secondAttribute="height" multiplier="0.5" id="j5X-ep-GsD"/>
+                                    <constraint firstItem="Eei-dt-kOz" firstAttribute="trailing" secondItem="rNf-2j-7gc" secondAttribute="trailing" id="jNR-7b-OG9"/>
+                                    <constraint firstItem="0GN-S3-BA6" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="je9-EA-K16"/>
+                                    <constraint firstItem="wMO-SM-Ffd" firstAttribute="width" secondItem="cKh-Rb-JsO" secondAttribute="width" multiplier="0.25" id="k6w-gb-Pdj"/>
+                                    <constraint firstItem="YMk-8e-4Wg" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="koo-US-Gww"/>
+                                    <constraint firstItem="T59-4y-evW" firstAttribute="width" secondItem="mka-ly-dXA" secondAttribute="width" multiplier="0.5" id="l5h-Nb-57W"/>
+                                    <constraint firstItem="mka-ly-dXA" firstAttribute="top" secondItem="cKh-Rb-JsO" secondAttribute="top" id="l7W-1I-Msl"/>
+                                    <constraint firstItem="YMk-8e-4Wg" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="mdi-ff-MHy"/>
+                                    <constraint firstItem="aOX-BB-g1M" firstAttribute="bottom" secondItem="YMk-8e-4Wg" secondAttribute="bottom" id="mzU-8B-enR"/>
+                                    <constraint firstItem="VSR-26-aMz" firstAttribute="bottom" secondItem="rm5-ZX-qw4" secondAttribute="bottom" id="n51-cU-bmZ"/>
+                                    <constraint firstItem="aOX-BB-g1M" firstAttribute="height" secondItem="YMk-8e-4Wg" secondAttribute="height" multiplier="0.5" id="n6s-PF-vGC"/>
+                                    <constraint firstItem="aOX-BB-g1M" firstAttribute="width" secondItem="YMk-8e-4Wg" secondAttribute="width" multiplier="0.5" id="nJJ-KW-bb4"/>
+                                    <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="rNf-2j-7gc" secondAttribute="trailing" id="nZe-MT-f15"/>
+                                    <constraint firstItem="mka-ly-dXA" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="oB8-K6-Sbg"/>
+                                    <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="trailing" id="p4W-fI-z7D"/>
+                                    <constraint firstItem="bwd-5L-81x" firstAttribute="top" secondItem="rNf-2j-7gc" secondAttribute="bottom" id="pCw-cC-x0b"/>
+                                    <constraint firstItem="4PS-Xn-RUK" firstAttribute="bottom" secondItem="bwd-5L-81x" secondAttribute="bottom" id="q9M-gB-dWK"/>
+                                    <constraint firstItem="oq4-tU-gzF" firstAttribute="trailing" secondItem="wMO-SM-Ffd" secondAttribute="trailing" id="qB2-ba-Sav"/>
+                                    <constraint firstItem="oq4-tU-gzF" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" multiplier="0.5" id="r0N-JS-PtV"/>
+                                    <constraint firstItem="aOX-BB-g1M" firstAttribute="trailing" secondItem="YMk-8e-4Wg" secondAttribute="trailing" id="sfI-XI-xhO"/>
+                                    <constraint firstItem="bwd-5L-81x" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="trailing" id="t8A-Hm-tge"/>
+                                    <constraint firstItem="MFA-pr-plM" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="ta8-t7-fFM"/>
+                                    <constraint firstItem="OlZ-cN-MCt" firstAttribute="top" secondItem="bwd-5L-81x" secondAttribute="bottom" id="tdq-l2-OYM"/>
+                                    <constraint firstItem="MD4-cd-NkJ" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="uGg-ui-S8Q"/>
+                                    <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="wMO-SM-Ffd" secondAttribute="trailing" id="uzh-O3-gbk"/>
+                                    <constraint firstItem="MFA-pr-plM" firstAttribute="top" secondItem="cKh-Rb-JsO" secondAttribute="top" id="wa3-aw-o4N"/>
+                                    <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="leading" id="y6C-5n-cvY"/>
+                                    <constraint firstItem="XNx-nT-K1P" firstAttribute="bottom" secondItem="FPQ-nY-GF9" secondAttribute="bottom" id="yJy-Nl-aYj"/>
+                                    <constraint firstItem="lfB-xj-VXf" firstAttribute="height" secondItem="MD4-cd-NkJ" secondAttribute="height" multiplier="0.5" id="yKF-0k-olW"/>
+                                    <constraint firstItem="rm5-ZX-qw4" firstAttribute="leading" secondItem="cKh-Rb-JsO" secondAttribute="leading" id="yuD-6x-aYS"/>
+                                    <constraint firstItem="4PS-Xn-RUK" firstAttribute="trailing" secondItem="bwd-5L-81x" secondAttribute="trailing" id="yuD-gh-ifa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lId-2c-GW1">
+                                <rect key="frame" x="104.5" y="593.5" width="10" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="xkL-O4-hNO">
+                                <rect key="frame" x="0.0" y="52" width="375" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xkL-O4-hNO" secondAttribute="height" multiplier="75:46" id="1bv-AW-sfW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-4k-sTt">
+                                <rect key="frame" x="209" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mfH-4k-sTt" secondAttribute="height" multiplier="1:1" id="0NT-WK-qiP"/>
+                                </constraints>
+                                <state key="normal" title="Download music" image="Area_Icons_DownloadAll"/>
                                 <connections>
                                     <action selector="downloadMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRU-gy-IkO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-9A-Evn">
-                                <rect key="frame" x="144" y="206" width="86" height="30"/>
-                                <state key="normal" title="Stop Playing"/>
-                                <connections>
-                                    <action selector="StopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeX-2X-TEo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mka-ly-dXA" firstAttribute="baseline" secondItem="MFA-pr-plM" secondAttribute="baseline" id="1ot-TG-0W8"/>
-                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="YMk-8e-4Wg" secondAttribute="leading" id="2M4-3e-xpg"/>
-                            <constraint firstItem="rNf-2j-7gc" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="leading" id="3hT-hj-Ufa"/>
-                            <constraint firstItem="bwd-5L-81x" firstAttribute="baseline" secondItem="lYC-7n-dL8" secondAttribute="baseline" id="6FI-yc-rH3"/>
-                            <constraint firstItem="A7B-QM-fT3" firstAttribute="leading" secondItem="vG4-Cm-blD" secondAttribute="leading" id="6no-1p-sJT"/>
-                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="top" secondItem="MD4-cd-NkJ" secondAttribute="bottom" constant="15" id="6tE-bR-dtr"/>
-                            <constraint firstItem="bwd-5L-81x" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="leading" id="7sW-B7-WbD"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="baseline" secondItem="bwd-5L-81x" secondAttribute="baseline" id="85e-Tw-ZVi"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="leading" id="9Ob-Qo-dfP"/>
-                            <constraint firstItem="mfH-4k-sTt" firstAttribute="top" secondItem="OU8-jC-35k" secondAttribute="bottom" constant="19" id="ASh-bz-xhC"/>
-                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="baseline" secondItem="OlZ-cN-MCt" secondAttribute="baseline" id="CNo-Ua-Pww"/>
-                            <constraint firstItem="rNf-2j-7gc" firstAttribute="baseline" secondItem="mka-ly-dXA" secondAttribute="baseline" id="EmO-7b-5w6"/>
-                            <constraint firstItem="vG4-Cm-blD" firstAttribute="baseline" secondItem="Xry-hB-iIw" secondAttribute="baseline" id="F2I-gb-Nbh"/>
-                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="bwd-5L-81x" secondAttribute="trailing" constant="41" id="Fbt-vx-pSA"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="MD4-cd-NkJ" secondAttribute="leading" id="HAO-ug-3s8"/>
-                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="mfH-4k-sTt" secondAttribute="centerX" id="HQg-jx-PE1"/>
-                            <constraint firstItem="0GN-S3-BA6" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="trailing" constant="56" id="I7Z-5w-gCZ"/>
-                            <constraint firstItem="A7B-QM-fT3" firstAttribute="top" secondItem="rm5-ZX-qw4" secondAttribute="bottom" constant="76" id="KFs-rt-nRc"/>
-                            <constraint firstItem="FPQ-nY-GF9" firstAttribute="baseline" secondItem="YMk-8e-4Wg" secondAttribute="baseline" id="Pht-qO-iNH"/>
-                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="trailing" constant="29" id="QOr-iX-OzF"/>
-                            <constraint firstItem="vG4-Cm-blD" firstAttribute="firstBaseline" secondItem="Xry-hB-iIw" secondAttribute="firstBaseline" id="Qxm-nk-xOb"/>
-                            <constraint firstItem="OU8-jC-35k" firstAttribute="leading" secondItem="Xry-hB-iIw" secondAttribute="leading" id="Ruu-l7-MXs"/>
-                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMK-Fd-jBe"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VeB-Oa-bfE"/>
-                            <constraint firstItem="mka-ly-dXA" firstAttribute="leading" secondItem="lYC-7n-dL8" secondAttribute="leading" id="VsF-Qy-wFK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xry-hB-iIw" secondAttribute="trailing" constant="13" id="YuK-jt-fMv"/>
-                            <constraint firstItem="MD4-cd-NkJ" firstAttribute="top" secondItem="wMO-SM-Ffd" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4x-dW-KK9"/>
-                            <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="0GN-S3-BA6" secondAttribute="leading" id="aRR-nD-oee"/>
-                            <constraint firstItem="OU8-jC-35k" firstAttribute="baseline" secondItem="A7B-QM-fT3" secondAttribute="firstBaseline" id="c6K-dl-5iq"/>
-                            <constraint firstItem="Xry-hB-iIw" firstAttribute="leading" secondItem="vG4-Cm-blD" secondAttribute="trailing" constant="8" symbolic="YES" id="f8Y-y2-PwG"/>
-                            <constraint firstItem="lYC-7n-dL8" firstAttribute="leading" secondItem="FPQ-nY-GF9" secondAttribute="leading" id="fcQ-s1-rMf"/>
-                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="g3n-fV-Gp9"/>
-                            <constraint firstItem="lYC-7n-dL8" firstAttribute="baseline" secondItem="0GN-S3-BA6" secondAttribute="baseline" id="gAS-5t-Bgw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vG4-Cm-blD" secondAttribute="bottom" constant="36" id="gYw-nV-Pgt"/>
-                            <constraint firstItem="OU8-jC-35k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="i5u-Oc-bWm"/>
-                            <constraint firstItem="OlZ-cN-MCt" firstAttribute="baseline" secondItem="FPQ-nY-GF9" secondAttribute="baseline" id="l0f-g2-9LT"/>
-                            <constraint firstItem="OU8-jC-35k" firstAttribute="leading" secondItem="A7B-QM-fT3" secondAttribute="trailing" constant="8" symbolic="YES" id="mf0-T9-yZq"/>
-                            <constraint firstItem="rm5-ZX-qw4" firstAttribute="leading" secondItem="A7B-QM-fT3" secondAttribute="leading" id="oiw-er-1sj"/>
-                            <constraint firstItem="A7B-QM-fT3" firstAttribute="top" secondItem="Cmg-9A-Evn" secondAttribute="bottom" constant="21" id="rMn-b8-GVu"/>
-                            <constraint firstItem="vG4-Cm-blD" firstAttribute="top" secondItem="mfH-4k-sTt" secondAttribute="bottom" constant="52" id="u6r-qL-Pei"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="uSu-ym-34n"/>
-                            <constraint firstItem="wMO-SM-Ffd" firstAttribute="baseline" secondItem="rNf-2j-7gc" secondAttribute="baseline" id="zgw-XO-icF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-Rb-JsO" secondAttribute="trailing" constant="8" id="1I1-a7-5AZ"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="centerY" secondItem="A7B-QM-fT3" secondAttribute="centerY" id="3UH-g7-oOj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cmg-9A-Evn" secondAttribute="bottom" constant="20" id="6Du-i3-Rgs"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="6eJ-dA-A0F"/>
+                            <constraint firstItem="A7B-QM-fT3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Rh-ed-i67"/>
+                            <constraint firstItem="cKh-Rb-JsO" firstAttribute="top" secondItem="xkL-O4-hNO" secondAttribute="bottom" constant="8" id="ABM-vK-pGF"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="width" secondItem="mfH-4k-sTt" secondAttribute="width" id="Btx-Tb-I89"/>
+                            <constraint firstItem="cKh-Rb-JsO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hgu-pm-F9P"/>
+                            <constraint firstItem="mfH-4k-sTt" firstAttribute="centerY" secondItem="A7B-QM-fT3" secondAttribute="centerY" id="McS-DM-U5w"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="height" secondItem="mfH-4k-sTt" secondAttribute="height" id="NP9-HK-trO"/>
+                            <constraint firstItem="Cmg-9A-Evn" firstAttribute="leading" secondItem="mfH-4k-sTt" secondAttribute="trailing" constant="8" id="Ptz-bP-jUt"/>
+                            <constraint firstItem="lId-2c-GW1" firstAttribute="centerY" secondItem="A7B-QM-fT3" secondAttribute="centerY" id="QNS-fJ-jJH"/>
+                            <constraint firstItem="lId-2c-GW1" firstAttribute="leading" secondItem="A7B-QM-fT3" secondAttribute="trailing" constant="8" id="QkW-RY-Mxp"/>
+                            <constraint firstItem="xkL-O4-hNO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Rzr-0b-Jog"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="centerY" secondItem="A7B-QM-fT3" secondAttribute="centerY" id="V9b-I4-lK7"/>
+                            <constraint firstItem="cKh-Rb-JsO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VGI-fC-rIa"/>
+                            <constraint firstItem="xkL-O4-hNO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VpN-ia-dak"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-Rb-JsO" secondAttribute="trailing" constant="8" id="Wc1-54-Evu"/>
+                            <constraint firstItem="OU8-jC-35k" firstAttribute="leading" secondItem="lId-2c-GW1" secondAttribute="trailing" constant="8" id="aRy-4C-BII"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cmg-9A-Evn" secondAttribute="trailing" constant="8" id="c87-6P-c7e"/>
+                            <constraint firstItem="cKh-Rb-JsO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="mfd-wT-akc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mfH-4k-sTt" secondAttribute="bottom" constant="20" id="o1e-xd-lgM"/>
+                            <constraint firstItem="xkL-O4-hNO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ule-Jl-gPA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="currentlyPlayingLabel" destination="OU8-jC-35k" id="yNy-U8-TsJ"/>
-                        <outlet property="statusLabel" destination="Xry-hB-iIw" id="FL0-eg-dgR"/>
+                        <outlet property="area10button" destination="OlZ-cN-MCt" id="Xgi-Qp-Vfj"/>
+                        <outlet property="area10statusImage" destination="Tbo-V7-f4x" id="Vbp-Nw-AmT"/>
+                        <outlet property="area11button" destination="FPQ-nY-GF9" id="PIE-wN-Iqe"/>
+                        <outlet property="area11statusImage" destination="XNx-nT-K1P" id="Q4p-ca-OIW"/>
+                        <outlet property="area12button" destination="YMk-8e-4Wg" id="YgJ-MD-aHZ"/>
+                        <outlet property="area12statusImage" destination="aOX-BB-g1M" id="dx8-c3-ISp"/>
+                        <outlet property="area1button" destination="wMO-SM-Ffd" id="7sK-aR-CZi"/>
+                        <outlet property="area1statusImage" destination="oq4-tU-gzF" id="aCG-uU-1pj"/>
+                        <outlet property="area2button" destination="rNf-2j-7gc" id="eJq-uY-fed"/>
+                        <outlet property="area2statusImage" destination="Eei-dt-kOz" id="eml-is-35C"/>
+                        <outlet property="area3button" destination="mka-ly-dXA" id="n0M-iM-c7C"/>
+                        <outlet property="area3statusImage" destination="T59-4y-evW" id="jKG-2X-4WB"/>
+                        <outlet property="area4button" destination="MFA-pr-plM" id="AaT-zw-Vgc"/>
+                        <outlet property="area4statusImage" destination="3H4-tC-UkY" id="0D9-T1-LgP"/>
+                        <outlet property="area5button" destination="MD4-cd-NkJ" id="4XZ-T7-Qso"/>
+                        <outlet property="area5statusImage" destination="lfB-xj-VXf" id="yjb-HD-Guh"/>
+                        <outlet property="area6button" destination="bwd-5L-81x" id="yf3-8z-2Lp"/>
+                        <outlet property="area6statusImage" destination="4PS-Xn-RUK" id="iIZ-5E-fl3"/>
+                        <outlet property="area7button" destination="lYC-7n-dL8" id="k5F-j9-M5P"/>
+                        <outlet property="area7statusImage" destination="tue-Qh-Fty" id="LOB-B1-OBc"/>
+                        <outlet property="area8button" destination="0GN-S3-BA6" id="BMc-6h-pGz"/>
+                        <outlet property="area8statusImage" destination="JLG-fC-W4p" id="sIz-Ui-ZjW"/>
+                        <outlet property="area9button" destination="rm5-ZX-qw4" id="PgT-yf-jvf"/>
+                        <outlet property="area9statusImage" destination="VSR-26-aMz" id="rIY-OJ-YzE"/>
+                        <outlet property="currentTimeLabel" destination="A7B-QM-fT3" id="Fsh-oJ-xuR"/>
+                        <outlet property="downloadAllButton" destination="mfH-4k-sTt" id="bCP-Wh-zdp"/>
+                        <outlet property="stopButton" destination="Cmg-9A-Evn" id="XmX-xV-aWx"/>
+                        <outlet property="totalTimeLabel" destination="OU8-jC-35k" id="4Px-bm-ypD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -234,4 +354,22 @@ Not Downloaded</string>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Area_Icons_DownloadAll" width="256" height="256"/>
+        <image name="Area_Icons_I" width="256" height="256"/>
+        <image name="Area_Icons_II" width="256" height="256"/>
+        <image name="Area_Icons_III" width="256" height="256"/>
+        <image name="Area_Icons_IV" width="256" height="256"/>
+        <image name="Area_Icons_IX" width="256" height="256"/>
+        <image name="Area_Icons_Stop" width="256" height="256"/>
+        <image name="Area_Icons_V" width="256" height="256"/>
+        <image name="Area_Icons_VI" width="256" height="256"/>
+        <image name="Area_Icons_VII" width="256" height="256"/>
+        <image name="Area_Icons_VIII" width="256" height="256"/>
+        <image name="Area_Icons_X" width="256" height="256"/>
+        <image name="Area_Icons_XI" width="256" height="256"/>
+        <image name="Area_Icons_XII" width="256" height="256"/>
+        <image name="Header_Logo" width="512" height="376.5"/>
+        <image name="Status_Icons_NotDownloaded" width="64" height="64"/>
+    </resources>
 </document>
