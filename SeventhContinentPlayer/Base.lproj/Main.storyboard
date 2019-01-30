@@ -166,11 +166,16 @@
                                     <imageView userInteractionEnabled="NO" tag="32" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_Icons_NotDownloaded" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-BB-g1M">
                                         <rect key="frame" x="314" y="224.5" width="45" height="45"/>
                                     </imageView>
+                                    <progressView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="redraw" semanticContentAttribute="forceLeftToRight" verticalHuggingPriority="750" preservesSuperviewLayoutMargins="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rcW-T4-zjd">
+                                        <rect key="frame" x="45" y="45" width="45" height="45"/>
+                                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="FPQ-nY-GF9" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="1mS-ZW-9QW"/>
                                     <constraint firstItem="lYC-7n-dL8" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="1r7-Tr-GWc"/>
+                                    <constraint firstItem="rcW-T4-zjd" firstAttribute="width" secondItem="oq4-tU-gzF" secondAttribute="width" id="3qT-00-FYc"/>
                                     <constraint firstItem="JLG-fC-W4p" firstAttribute="height" secondItem="0GN-S3-BA6" secondAttribute="height" multiplier="0.5" id="43A-6d-7nB"/>
                                     <constraint firstItem="XNx-nT-K1P" firstAttribute="trailing" secondItem="FPQ-nY-GF9" secondAttribute="trailing" id="4fj-Gd-PiK"/>
                                     <constraint firstItem="tue-Qh-Fty" firstAttribute="height" secondItem="lYC-7n-dL8" secondAttribute="height" multiplier="0.5" id="8J6-rw-nyM"/>
@@ -185,6 +190,7 @@
                                     <constraint firstItem="MD4-cd-NkJ" firstAttribute="leading" secondItem="cKh-Rb-JsO" secondAttribute="leading" id="FLD-34-L6c"/>
                                     <constraint firstItem="XNx-nT-K1P" firstAttribute="height" secondItem="FPQ-nY-GF9" secondAttribute="height" multiplier="0.5" id="Fae-rn-3dA"/>
                                     <constraint firstItem="lYC-7n-dL8" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="Gh1-1o-Uxl"/>
+                                    <constraint firstItem="rcW-T4-zjd" firstAttribute="top" secondItem="oq4-tU-gzF" secondAttribute="top" id="H4O-aI-Epz"/>
                                     <constraint firstItem="MD4-cd-NkJ" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="J89-Bh-ZKw"/>
                                     <constraint firstItem="VSR-26-aMz" firstAttribute="trailing" secondItem="rm5-ZX-qw4" secondAttribute="trailing" id="JGf-2V-a9D"/>
                                     <constraint firstItem="YMk-8e-4Wg" firstAttribute="top" secondItem="0GN-S3-BA6" secondAttribute="bottom" id="JIJ-MK-9I4"/>
@@ -201,6 +207,7 @@
                                     <constraint firstItem="tue-Qh-Fty" firstAttribute="trailing" secondItem="lYC-7n-dL8" secondAttribute="trailing" id="Nqw-85-kfD"/>
                                     <constraint firstItem="T59-4y-evW" firstAttribute="height" secondItem="mka-ly-dXA" secondAttribute="height" multiplier="0.5" id="PMJ-YY-m2G"/>
                                     <constraint firstItem="0GN-S3-BA6" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="Pun-RS-MDh"/>
+                                    <constraint firstItem="rcW-T4-zjd" firstAttribute="leading" secondItem="oq4-tU-gzF" secondAttribute="leading" id="QSv-qG-gPW"/>
                                     <constraint firstItem="rm5-ZX-qw4" firstAttribute="width" secondItem="wMO-SM-Ffd" secondAttribute="width" id="R1F-J6-orC"/>
                                     <constraint firstItem="FPQ-nY-GF9" firstAttribute="leading" secondItem="OlZ-cN-MCt" secondAttribute="trailing" id="RPK-Hj-oAG"/>
                                     <constraint firstItem="3H4-tC-UkY" firstAttribute="bottom" secondItem="MFA-pr-plM" secondAttribute="bottom" id="T1H-gS-U5k"/>
@@ -231,6 +238,7 @@
                                     <constraint firstItem="Tbo-V7-f4x" firstAttribute="height" secondItem="OlZ-cN-MCt" secondAttribute="height" multiplier="0.5" id="gQw-Z4-NTn"/>
                                     <constraint firstAttribute="bottom" secondItem="rm5-ZX-qw4" secondAttribute="bottom" constant="0.5" id="gkj-Pj-Zhf"/>
                                     <constraint firstItem="T59-4y-evW" firstAttribute="bottom" secondItem="mka-ly-dXA" secondAttribute="bottom" id="gzm-4z-4xv"/>
+                                    <constraint firstItem="rcW-T4-zjd" firstAttribute="height" secondItem="oq4-tU-gzF" secondAttribute="height" id="hBz-0e-b68"/>
                                     <constraint firstItem="MFA-pr-plM" firstAttribute="height" secondItem="wMO-SM-Ffd" secondAttribute="height" id="hUe-4I-9T4"/>
                                     <constraint firstItem="OlZ-cN-MCt" firstAttribute="leading" secondItem="rm5-ZX-qw4" secondAttribute="trailing" id="iX1-9l-g5D"/>
                                     <constraint firstItem="MFA-pr-plM" firstAttribute="leading" secondItem="mka-ly-dXA" secondAttribute="trailing" id="ioE-NS-RDL"/>
@@ -346,6 +354,7 @@
                         <outlet property="currentTimeLabel" destination="A7B-QM-fT3" id="Fsh-oJ-xuR"/>
                         <outlet property="downloadAllButton" destination="mfH-4k-sTt" id="bCP-Wh-zdp"/>
                         <outlet property="stopButton" destination="Cmg-9A-Evn" id="XmX-xV-aWx"/>
+                        <outlet property="testProgress" destination="rcW-T4-zjd" id="H5q-GR-WNZ"/>
                         <outlet property="totalTimeLabel" destination="OU8-jC-35k" id="4Px-bm-ypD"/>
                     </connections>
                 </viewController>

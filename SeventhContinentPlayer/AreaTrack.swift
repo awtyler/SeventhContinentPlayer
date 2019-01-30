@@ -82,6 +82,10 @@ public class AreaTrack {
     }
     
     func download(withSuccessHandler successHandler: ((_ track: AreaTrack) -> Void)?) -> Void {
+        download(withProgress: nil, successHandler: successHandler)
+    }
+    
+    func download(withProgress progressView: UIProgressView?, successHandler: ((_ track: AreaTrack) -> Void)?) -> Void {
         
         // Destination URL
         let destinationFileUrl = self.getLocalUrl()
@@ -89,7 +93,9 @@ public class AreaTrack {
         let request = URLRequest(url:self.getRemoteUrl())
 
         //TODO: Make this work
-        self.updateStatus(to: .WaitingForDownload)
+        //self.updateStatus(to: .WaitingForDownload)
+        self.updateStatus(to: .Downloading)
+        
 
         let task = downloadSession.downloadTask(with: request) { (tempLocalUrl, response, error) in
         
@@ -101,8 +107,6 @@ public class AreaTrack {
                     print("Error removing file: \(error)")
                 }
             }
-
-            self.updateStatus(to: .Downloading)
 
             if let tempLocalUrl = tempLocalUrl, error == nil {
                 // Success
@@ -136,6 +140,9 @@ public class AreaTrack {
 //                self.updateStatus()
 //            }
             
+        }
+        if let pv = progressView {
+            pv.observedProgress = task.progress
         }
         task.resume();
         

@@ -81,6 +81,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         
         disableStopButton()
         
+//        testProgress.transform = testProgress.transform.scaledBy(x: 1, y: 20)
+        
+        
         //Setup Audio session, output to speaker, and allow airplay & bluetooth
         do {
             let instance = AVAudioSession.sharedInstance()
@@ -112,6 +115,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
     @IBOutlet weak var area10button: UIButton!
     @IBOutlet weak var area11button: UIButton!
     @IBOutlet weak var area12button: UIButton!
+    
+    @IBOutlet weak var testProgress: UIProgressView!
     
     @IBOutlet weak var downloadAllButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -156,7 +161,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
         //If not downloaded, download now
         if track.downloadStatus == .NotDownloaded {
             self.stopMusic(nil)
-            track.download(withSuccessHandler: { track in
+            track.download(withProgress: self.testProgress, successHandler: { track in
                 self.playMusic(forTrack: track)
             })
         } else {
