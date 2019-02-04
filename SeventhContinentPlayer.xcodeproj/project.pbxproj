@@ -16,6 +16,9 @@
 		935D03EA220228E0003FB2E9 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */; };
 		9394124C21FFEE6300DFC961 /* AreaTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9394124B21FFEE6200DFC961 /* AreaTrack.swift */; };
 		93A98F912200A4B100F11FC2 /* AreaTrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A98F902200A4B100F11FC2 /* AreaTrackList.swift */; };
+		93AD17272208C173003D520B /* CreditsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD17262208C173003D520B /* CreditsTableTableViewController.swift */; };
+		93AD17292208C235003D520B /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD17282208C235003D520B /* Credit.swift */; };
+		93AD172B2208E0A7003D520B /* AreaCreditList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD172A2208E0A7003D520B /* AreaCreditList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		9394124B21FFEE6200DFC961 /* AreaTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTrack.swift; sourceTree = "<group>"; };
 		93A98F902200A4B100F11FC2 /* AreaTrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTrackList.swift; sourceTree = "<group>"; };
+		93AD17262208C173003D520B /* CreditsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsTableTableViewController.swift; sourceTree = "<group>"; };
+		93AD17282208C235003D520B /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		93AD172A2208E0A7003D520B /* AreaCreditList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCreditList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				9394124B21FFEE6200DFC961 /* AreaTrack.swift */,
 				93A98F902200A4B100F11FC2 /* AreaTrackList.swift */,
 				935D03E9220228E0003FB2E9 /* CircularProgressBar.swift */,
+				93AD17262208C173003D520B /* CreditsTableTableViewController.swift */,
+				93AD17282208C235003D520B /* Credit.swift */,
+				93AD172A2208E0A7003D520B /* AreaCreditList.swift */,
 			);
 			path = SeventhContinentPlayer;
 			sourceTree = "<group>";
@@ -164,7 +173,10 @@
 				9394124C21FFEE6300DFC961 /* AreaTrack.swift in Sources */,
 				93260DC121F68DC200705F41 /* ViewController.swift in Sources */,
 				93260DBF21F68DC200705F41 /* AppDelegate.swift in Sources */,
+				93AD17292208C235003D520B /* Credit.swift in Sources */,
 				935D03EA220228E0003FB2E9 /* CircularProgressBar.swift in Sources */,
+				93AD17272208C173003D520B /* CreditsTableTableViewController.swift in Sources */,
+				93AD172B2208E0A7003D520B /* AreaCreditList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
