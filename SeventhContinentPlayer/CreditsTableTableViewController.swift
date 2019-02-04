@@ -169,6 +169,9 @@ class CreditsTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
+        if areaCreditLists[section].creditList.count == 0 {
+            return 1
+        }
         return areaCreditLists[section].creditList.count
         
     }
@@ -182,6 +185,7 @@ class CreditsTableTableViewController: UITableViewController {
         
         if area.creditList.count == 0 {
             cell.textLabel!.text = "No credits for this track"
+            cell.detailTextLabel!.text = ""
         } else {
             let credit = area.creditList[indexPath.item]
             cell.textLabel!.text = credit.soundName
