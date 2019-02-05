@@ -77,6 +77,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AreaTrackDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Print working directory
+        print("MP3 Directory: \(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)")
 
         let list = AreaTrackList.sharedInstance()
         

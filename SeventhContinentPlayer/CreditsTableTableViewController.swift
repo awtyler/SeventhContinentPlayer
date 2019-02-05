@@ -21,6 +21,12 @@ class CreditsTableViewController: UITableViewController {
         
         //Load Credits:
         self.areaCreditLists = [
+            AreaCreditList(trackNumber: 0, areaName: "General", creditList: [
+                Credit(trackNumber: 0, trackName: "General", soundName: "App © 2019 Rhindon Computing"),
+                Credit(trackNumber: 0, trackName: "General", soundName: "Music © Serious Poulp"),
+                Credit(trackNumber: 0, trackName: "General", soundName: "Performance by The Balance Of Power"),
+                Credit(trackNumber: 0, trackName: "General", soundName: "Composed and Remixed by Barry Doublet")
+            ]),
             AreaCreditList(trackNumber: 1, areaName: "Area I", creditList: [
                 Credit(trackNumber: 1, trackName: "Area I", soundName: "A forest on the island", artist: "originalmaja"),
                 Credit(trackNumber: 1, trackName: "Area I", soundName: "Flock of seagulls", artist: "juskiddink"),
@@ -152,20 +158,7 @@ class CreditsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ([
-            "Area I",
-            "Area II",
-            "Area III",
-            "Area IV",
-            "Area V",
-            "Area VI",
-            "Area VII",
-            "Area VIII",
-            "Area IX",
-            "Area X",
-            "Area XI",
-            "Area XII"
-        ])[section]
+        return areaCreditLists[section].areaName
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -194,7 +187,11 @@ class CreditsTableViewController: UITableViewController {
         } else {
             let credit = area.creditList[indexPath.item]
             cell.textLabel!.text = credit.soundName
-            cell.detailTextLabel!.text = "Artist: \(credit.artist)"
+            if let artist = credit.artist {
+                cell.detailTextLabel!.text = "Artist: \(artist)"
+            } else {
+                cell.detailTextLabel!.text = ""
+            }
         }
 
         return cell

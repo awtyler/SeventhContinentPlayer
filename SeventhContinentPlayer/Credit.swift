@@ -13,9 +13,9 @@ class Credit {
     let trackNumber: Int
     let trackName: String
     let soundName: String
-    let artist: String
+    let artist: String?
     
-    init(trackNumber: Int, trackName: String, soundName: String, artist: String) {
+    init(trackNumber: Int, trackName: String, soundName: String, artist: String? = nil) {
         self.trackNumber = trackNumber
         self.trackName = trackName
         self.soundName = soundName

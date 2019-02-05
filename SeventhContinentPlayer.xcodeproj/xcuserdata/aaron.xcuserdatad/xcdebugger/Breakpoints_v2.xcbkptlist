@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeventhContinentPlayer/ViewController.swift"
-            timestampString = "571009683.72999"
+            timestampString = "571090194.301704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "playArea(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeventhContinentPlayer/CreditsTableTableViewController.swift"
-            timestampString = "571028143.543843"
+            timestampString = "571090194.302596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -90,61 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeventhContinentPlayer/CreditsTableTableViewController.swift"
-            timestampString = "571028143.5440871"
+            timestampString = "571090194.302826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeventhContinentPlayer/CreditsTableTableViewController.swift"
-            timestampString = "571028143.544209"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "tableView(_:titleForHeaderInSection:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SeventhContinentPlayer.CreditsTableTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "SeventhContinentPlayer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aaron/repos/SeventhContinentPlayer/SeventhContinentPlayer/CreditsTableTableViewController.swift"
-                  timestampString = "571004199.1973521"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "293">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SeventhContinentPlayer.Credit) -&gt; Swift.Bool in SeventhContinentPlayer.CreditsTableTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "SeventhContinentPlayer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aaron/repos/SeventhContinentPlayer/SeventhContinentPlayer/CreditsTableTableViewController.swift"
-                  timestampString = "571004199.2033"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
