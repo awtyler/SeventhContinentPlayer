@@ -152,10 +152,6 @@ public class AreaTrack: NSObject, URLSessionDownloadDelegate {
     }
     
     func download(withSuccessHandler successHandler: ((_ track: AreaTrack) -> Void)?) -> Void {
-        download(withProgress: nil, successHandler: successHandler)
-    }
-    
-    func download(withProgress progressView: UIProgressView?, successHandler: ((_ track: AreaTrack) -> Void)?) -> Void {
         
         guard let downloadSession = self.downloadSession else {
             print("Error with downloadSession")
@@ -167,9 +163,7 @@ public class AreaTrack: NSObject, URLSessionDownloadDelegate {
         self.updateStatus(to: .Downloading)
         
         let task = downloadSession.downloadTask(with: request);
-        if let pv = progressView {
-            pv.observedProgress = task.progress
-        }
+
         task.resume();
         
         return
