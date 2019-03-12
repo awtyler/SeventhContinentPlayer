@@ -22,6 +22,7 @@ class CreditsTableViewController: UITableViewController {
         //Load Credits:
         self.areaCreditLists = [
             AreaCreditList(trackNumber: 0, areaName: "General", creditList: [
+                Credit(trackNumber: 0, trackName: "General", soundName: "T7C Player Version 1.2"),
                 Credit(trackNumber: 0, trackName: "General", soundName: "App © 2019 Rhindon Computing"),
                 Credit(trackNumber: 0, trackName: "General", soundName: "Music © Serious Poulp"),
                 Credit(trackNumber: 0, trackName: "General", soundName: "Performance by The Balance Of Power"),
